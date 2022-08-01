@@ -10,10 +10,14 @@ import {
   theme,
 } from '@chakra-ui/react';
 import GamePage from './components/GamePage'
+import CountdownTimer from './components/CountdownTimer';
 function App() {
   return (
     <ChakraProvider theme={theme}>
+      <CountdownTimer/>
       <GamePage/>
+      
+
     </ChakraProvider>
   );
 }
