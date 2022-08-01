@@ -21,11 +21,11 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  /* top: calc(15% - 40px); */
   right: 0;
   border-width: 20px;
   border-style: solid;
   border-color: #20FC94 transparent #20FC94 transparent;
+ box-shadow: inset 0px 2px -2px 2px rgba(255,255,204,0.7), inset 0px -2px -2px 2px rgba(255,255,204,0.7);
   border-radius: 100%;
   animation: rotation 2s infinite linear;
 }
@@ -38,4 +38,61 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+svg {
+  width: 200px;
+  height: 300px;
+}
+
+#circle {
+  fill: transparent;
+  stroke-width: 15px;
+  stroke-dasharray: 450;
+  stroke: white;
+  position: relative;
+  transform: translate(30px, 30px);
+}
+
+#circle1 {
+  fill: transparent;
+  stroke-width: 15px;
+  stroke-dasharray: 0;
+  stroke: rgb(67, 19, 199);
+  position: relative;
+  transform: translate(30px, 30px);
+}
+
+p {
+  position: absolute;
+  font-size: 40px;
+  font-weight: bold;
+  top: 177px;
+  left: 130px;
+}
+
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 80px solid red;
 }
