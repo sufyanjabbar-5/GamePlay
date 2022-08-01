@@ -1,22 +1,12 @@
 import React from 'react';
 import './GamePlay.css';
-import { Stack, Text } from '@chakra-ui/react';
+import {
+  CircularProgress,
+  CircularProgressLabel,
+  Stack,
+  Text,
+} from '@chakra-ui/react';
 const GamePage = () => {
-  var a = 20;
-  var b = a;
-  var t = setInterval(() => {
-    var s = document.getElementById('circle');
-    s.style.strokeDashoffset = -(450 * a) / b;
-    a = a < 10 ? '0' + a : a;
-    document.getElementById('so').innerHTML = a;
-    setTimeout(() => {
-      s.style.transition = '2s';
-    }, 10);
-    a--;
-    if (a == -1) {
-      clearInterval(t);
-    }
-  }, 1000);
   return (
     <Stack
       height={'100vh'}
@@ -26,49 +16,71 @@ const GamePage = () => {
       justify={'center'}
       spacing={'4'}
     >
-      <div className='triangle'>
-
-      </div>
-      {/* <div className="lds-dual-ring" style={{ border: '10px soild red' }}>
-        <div style={{ color: 'white', position: 'absolute', top: '100%', left: "100%" }}>21</div>
-        <div style={{ border: '1px solid white', position: 'absolute', top: '100%', left: "100%" }}></div>
-      </div> */}
-      {/* <div class="container">
-        <svg>
-          <circle id="circle1" cy="70px" cx="70px" r="70px"></circle>
-          <circle id="circle" cy="70px" cx="70px" r="70px">
-            <div class="centered" style={{ height: '60vh', width: '60vh' }}>
-              <div
-                class="loading-text"
-                style={{ height: '100%', width: '100%', padding: 20 }}
+      <CircularProgress
+        trackColor="inherit"
+        capIsRound
+        thickness={'6px'}
+        className="circlular progress"
+        value={80}
+        size={'500px'}
+        color={'#20fc94'}
+        alignItems={'center'}
+        justifyContent={'center'}
+        display={'flex'}
+      >
+        <CircularProgressLabel
+          className="circlular progress lable"
+          borderRadius={'full'}
+          alignItems={'center'}
+          justifyContent={'center'}
+          display={'flex'}
+        >
+          <Stack
+            border={'5px solid #20FC9D'}
+            borderRadius={'full'}
+            h={'385px'}
+            w={'385px'}
+            align={'center'}
+            justify={'center'}
+          >
+            <Stack
+              border={'5px solid #13cee6'}
+              borderRadius={'full'}
+              h={'350px'}
+              w={'350px'}
+              boxShadow={'0 0 25px #13cee6'}
+              align={'center'}
+              justify={'center'}
+            >
+              <Stack
+                className="text"
+                h={'full'}
+                w={'full'}
+                p={'12'}
+                align={'center'}
+                justify={'center'}
               >
-                <Stack height={'100%'} w={'100%'}>
-                  <Stack
-                    border={'5px solid #20FC94'}
-                    borderRadius={'full'}
-                    padding={'6'}
-                    h={'100%'}
-                  >
-                    <Stack
-                      boxSize={'100%'}
-                      bgColor={'#1D1D30'}
-                      border={'5px solid #13CEE6'}
-                      boxShadow={'0 0 15px #13cee6'}
-                      align={'center'}
-                      justify={'center'}
-                      borderRadius={'full'}
-                    >
-                      <Text color={'white'}>17</Text>
-                    </Stack>
-                  </Stack>
-                </Stack>
-              </div>
-            </div>
-          </circle>
-        </svg>
-        <p id="so"></p>
-      </div> */}
-     
+                <Text
+                  flex={'2'}
+                  h={'fit-content'}
+                  w={'fit-content'}
+                  fontSize={'1.4em'}
+                  background={
+                    'radial-gradient(circle, rgba(201,18,191,1) 0%, rgba(134,40,206,1) 51%)'
+                  }
+                  backgroundClip={'text'}
+                  style={{ WebkitTextStroke: '1px #20fc9d' }}
+                >
+                  17
+                </Text>
+                <Text flex={'2'} color={'#FCA120'} px={'4'} fontSize={'md'}>
+                  Will the next number be Higher or Lower
+                </Text>
+              </Stack>
+            </Stack>
+          </Stack>
+        </CircularProgressLabel>
+      </CircularProgress>
     </Stack>
   );
 };
