@@ -9,15 +9,6 @@ const GamePage = () => {
       <CircularProgress trackColor='inherit' capIsRound thickness={'6px'} className='circlular progress' value={80} size={'500px'} color={'#20fc94'} alignItems={'center'} justifyContent={'center'} display={'flex'}>
 
         <CircularProgressLabel className='circlular progress lable' borderRadius={'full'} alignItems={'center'} justifyContent={'center'} display={'flex'}>
-          {/* <div style={{ borderRadius: '50%', height: '40vh', width: '40vw' }}>
-            <Stack className='upper Stack' height={'80%'} w={'80%'} align={'center'} justify={'center'}>
-              <Stack border={'5px solid #20FC94'} padding={'6'} height={'90%'} w={'90%'} align={'center'} justify={'center'}>
-                <Stack boxSize={'100%'} bgColor={'inherit'} border={'5px solid #13CEE6'} boxShadow={'0 0 15px #13cee6'} align={'center'} justify={'center'} borderRadius={'full'} height={'90%'} w={'90%'}>
-                  <Text color={"white"}>17</Text>
-                </Stack>
-              </Stack>
-            </Stack>
-          </div> */}
           <Stack border={'5px solid #20FC9D'} borderRadius={'full'} h={'385px'} w={'385px'} align={'center'} justify={'center'}>
             <Stack border={'5px solid #13cee6'} borderRadius={'full'} h={'350px'} w={'350px'} boxShadow={'0 0 25px #13cee6'} align={'center'} justify={'center'}>
               <Stack className='text' h={'full'} w={'full'} p={'12'} align={'center'} justify={'center'}>
