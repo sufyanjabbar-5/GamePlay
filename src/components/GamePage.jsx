@@ -1,31 +1,34 @@
 import React from 'react';
 import './GamePlay.css';
-import { Stack, Text } from '@chakra-ui/react';
+import { CircularProgress, CircularProgressLabel, Stack, Text } from '@chakra-ui/react';
 const GamePage = () => {
+
   return (
     <Stack height={'100vh'} alignItems={'center'} bg={'#161940'} w={'100%'} justify={'center'} spacing={'4'}>
-      {/* <div className="lds-dual-ring" style={{ border: '10px soild red' }}>
-        <div style={{ color: 'white', position: 'absolute', top: '100%', left: "100%" }}>21</div>
-        <div style={{ border: '1px solid white', position: 'absolute', top: '100%', left: "100%" }}></div>
-      </div> */}
 
-      <div class="centered" style={{ height: '60vh', width: '60vh' }}>
-        <div id="divSpinner" class="spinner loading" style={{ height: '100%', width: '100%' }}>
-          <div class="loading-text" style={{ height: '100%', width: '100%' , padding: 20}}>
-            <Stack height={'100%'} w={'100%'} >
-              <Stack border={'5px solid #20FC94'} borderRadius={'full'} padding={'6'} h={'100%'}>
-                <Stack boxSize={'100%'} bgColor={'#1D1D30'} border={'5px solid #13CEE6'} boxShadow={'0 0 15px #13cee6'} align={'center'} justify={'center'} borderRadius={'full'}>
+      <CircularProgress trackColor='inherit' capIsRound thickness={'6px'} className='circlular progress' value={80} size={'500px'} color={'#20fc94'} alignItems={'center'} justifyContent={'center'} display={'flex'}>
+
+        <CircularProgressLabel className='circlular progress lable' borderRadius={'full'} alignItems={'center'} justifyContent={'center'} display={'flex'}>
+          {/* <div style={{ borderRadius: '50%', height: '40vh', width: '40vw' }}>
+            <Stack className='upper Stack' height={'80%'} w={'80%'} align={'center'} justify={'center'}>
+              <Stack border={'5px solid #20FC94'} padding={'6'} height={'90%'} w={'90%'} align={'center'} justify={'center'}>
+                <Stack boxSize={'100%'} bgColor={'inherit'} border={'5px solid #13CEE6'} boxShadow={'0 0 15px #13cee6'} align={'center'} justify={'center'} borderRadius={'full'} height={'90%'} w={'90%'}>
                   <Text color={"white"}>17</Text>
                 </Stack>
               </Stack>
             </Stack>
-          </div>
-        </div>
-      </div>
+          </div> */}
+          <Stack border={'5px solid #20FC9D'} borderRadius={'full'} h={'385px'} w={'385px'} align={'center'} justify={'center'}>
+            <Stack border={'5px solid #13cee6'} borderRadius={'full'} h={'350px'} w={'350px'} boxShadow={'0 0 25px #13cee6'} align={'center'} justify={'center'}>
+              <Stack className='text' h={'full'} w={'full'} p={'12'} align={'center'} justify={'center'}>
+                <Text flex={'2'} h={"fit-content"} w={'fit-content'} fontSize={'1.4em'} background={'radial-gradient(circle, rgba(201,18,191,1) 0%, rgba(134,40,206,1) 51%)'} backgroundClip={'text'} style={{ WebkitTextStroke: '1px #20fc9d' }}>17</Text>
+                <Text flex={'2'} color={'#FCA120'} px={'4'} fontSize={'md'}>Will the next number be Higher or Lower</Text>
+              </Stack>
+            </Stack>
+          </Stack>
+        </CircularProgressLabel>
+      </CircularProgress>
     </Stack>
-
-
-
   );
 };
 
