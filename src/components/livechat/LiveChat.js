@@ -7,57 +7,76 @@ const LiveChat = () => {
 
   return (
     <Stack
-    w={'100%'}
-      p={'4'}
-      alignItems={'center'}
+      w={'100%'}
+      py={'8'}
       bg={'#1A1F26'}
       borderRadius={'3xl'}
       mt={'0 !important'}
-      border={'4px solid #D306D4'}
+      border={'1px solid #FF00FF'}
+      boxShadow="#772138 2px 2px 4px 0px, #772138 1px 2px 10px 4px"
     >
-      <Stack w={'full'} alignItems='baseline'>
-      <Heading
-        color={'#FFFFFF'}
-        fontSize={'md'}
-        borderBottom={'2px solid #FCA120'}
-      >
-        Live Chat
-      </Heading>
+      <Stack mb={'4 !important'} px={'10'} w={'full'} alignItems="baseline">
+        <Heading
+          color={'#FFFFFF'}
+          fontSize={'xl'}
+          borderBottom={'4px solid #FCA120'}
+          pb={'1.5'}
+        >
+          Live Chat
+        </Heading>
       </Stack>
-      <Stack>
-        <Heading size={'sm'} color={'#23C232'}>
-          Jack
-        </Heading>
-        <Text color={'#BCBCC2'}>Hi there how are you doing?</Text>
-
-        <Heading size={'sm'} color={'#20DEFC'}>
-          William
-        </Heading>
-        <Text color={'#BCBCC2'}>Im good jack, how are you?</Text>
-
-        <Heading size={'sm'} color={'#E79421'}>
-          Eric
-        </Heading>
-        <Text>Hope everyone is doin fine</Text>
-
-        <Heading size={'sm'} color={'#601E96'}>
-          Andrew
-        </Heading>
-        <Text color={'#BCBCC2'}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </Text>
+      <Stack spacing={'3'}>
+        <Stack p={'4'} mx="3 !important" bgColor={'#1D1D30'}>
+          <Heading fontSize={'md'} color={'#23C232'}>
+            Jackpot Classic
+          </Heading>
+          <Text fontSize={'sm'} color={'#BCBCC2'}>
+            Lorem ipsum is a placeholder text commonly used to demonstrate the
+            visual form of a document or a typeface without relying on
+            meaningful content.
+          </Text>
+        </Stack>
+        <Stack p={'4'} mx="3 !important" bgColor={'#1D1D30'}>
+          <Heading fontSize={'md'} color={'#20DEFC'}>
+            Jackpot Classic
+          </Heading>
+          <Text fontSize={'sm'} color={'#BCBCC2'}>
+            Lorem ipsum is a placeholder text commonly used to demonstrate the
+            visual form of a document or a typeface without relying on
+            meaningful content.
+          </Text>
+        </Stack>
+        <Stack
+          direction={'row'}
+          spacing="4"
+          p={'4'}
+          mx="3 !important"
+          bgColor={'#1D1D30'}
+        >
+          <Heading fontSize={'md'} color={'#F59D20'}>
+            Roulette
+          </Heading>
+          <Text fontSize={'sm'} color={'#BCBCC2'}>
+            Thank You!
+          </Text>
+        </Stack>
+        <Stack p={'4'} mx="3 !important" bgColor={'#1D1D30'}>
+          <Heading fontSize={'md'} color={'#FC2020'}>
+            Jackpot Classic
+          </Heading>
+          <Text fontSize={'sm'} color={'#BCBCC2'}>
+            Lorem ipsum is a placeholder text commonly used to demonstrate the
+            visual form of a document or a typeface without relying on
+            meaningful content.
+          </Text>
+        </Stack>
       </Stack>
 
+      {/* send message */}
+      <Stack px='4'>
       <Stack
-        border={'2px solid yellow'}
+        border={'1px solid #FF9100'}
+        boxShadow="#82692F 2px 2px 4px 0px, #82692F 1px 2px 7px 3px"
         direction={'row'}
         alignItems={'center'}
         justifyContent={'space-between'}
@@ -78,9 +97,10 @@ const LiveChat = () => {
             size="sm"
           />
         </Stack>
-        <Stack bgColor={'yellow'} fontSize={'30px'}>
-          <RiSendPlaneFill />
+        <Stack _hover={{cursor:'pointer'}} bgColor={'yellow'} p='1.5' borderRadius={'md'}>
+          <RiSendPlaneFill fontSize={'1.5rem'} />
         </Stack>
+      </Stack>
       </Stack>
     </Stack>
   );
