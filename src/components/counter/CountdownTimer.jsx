@@ -15,7 +15,8 @@ const CountdownTimer = () => {
         spacing={'5'}
         w={'100%'}
         bg="#1D1D30"
-        p={{ base: '4', md: '8', lg: '16' }}
+        py={'6'}
+        px={{ base: '4', md: '8', lg: '16' }}
       >
         <Stack
           border={'1px solid #128F8E'}
@@ -23,7 +24,7 @@ const CountdownTimer = () => {
           borderRadius={'2xl'}
           bgColor="#1A1F26"
           w={'100%'}
-          px="10"
+          px={{base:'4',md:'6',lg:'10'}}
           py={{ base: '6', lg: '3' }}
         >
           <Stack
@@ -68,7 +69,7 @@ const CountdownTimer = () => {
           borderRadius={'2xl'}
           bgColor="#1A1F26"
           w={'100%'}
-          px="10"
+          px={'3'}
           py={{ base: '6', lg: '3' }}
           textAlign="center"
           spacing={'1'}
