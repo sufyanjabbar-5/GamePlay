@@ -10,16 +10,15 @@ import {
   theme,
   Stack,
 } from '@chakra-ui/react';
-import GamePage from './components/GamePage';
-import LeaderBoard from './components/leaderboard/LeaderBoard';
-import LiveChat from './components/livechat/LiveChat';
+import GamePage from './components/GamePage'
+import CountdownTimer from './components/counter/CountdownTimer';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      {/* <GamePage/> */}
-      <Stack px={'4'} >
-        <LeaderBoard />
-      </Stack>
+      <CountdownTimer/>
+      <GamePage/>
+      
+
     </ChakraProvider>
   );
 }
