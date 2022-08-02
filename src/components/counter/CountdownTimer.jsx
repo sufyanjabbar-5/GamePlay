@@ -69,7 +69,7 @@ const CountdownTimer = () => {
           borderRadius={'2xl'}
           bgColor="#1A1F26"
           w={'100%'}
-          px="10"
+          px={'3'}
           py={{ base: '6', lg: '3' }}
           textAlign="center"
           spacing={'1'}
