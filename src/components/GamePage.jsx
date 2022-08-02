@@ -1,19 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './GamePlay.css';
 import {
   CircularProgress,
   CircularProgressLabel,
+  IconButton,
   Stack,
   Text,
 } from '@chakra-ui/react';
+import { BsFillTriangleFill } from 'react-icons/bs';
+
+function useInterval(callback, delay) {
+  const savedCallback = useRef();
+
+  // Remember the latest callback.
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  // Set up the interval.
+  useEffect(() => {
+    let id = setInterval(() => {
+      savedCallback.current();
+    }, delay);
+    return () => clearInterval(id);
+  }, [delay]);
+}
+
 const GamePage = () => {
   const [number, setnumber] = useState(10);
+  const [counter, setCounter] = useState(100);
 
   useEffect(() => {
-   setInterval(
-      () => setnumber(Math.floor(Math.random() * 20 + 1)),
-      10000
-    );
+    setInterval(() => setnumber(Math.floor(Math.random() * 20 + 1)), 10000);
   }, []);
 
   return (
@@ -115,6 +133,40 @@ const GamePage = () => {
           </Stack>
         </CircularProgressLabel>
       </CircularProgress>
+      <Stack direction={'row'} justify={'space-between'} color={'white'}>
+        <IconButton
+          _hover={{}}
+          _focus={{}}
+          _active={{}}
+          variant={'ghost'}
+          icon={
+            <BsFillTriangleFill
+              size={'4em'}
+              style={{
+                background:
+                  'radial-gradient(circle, rgba(201,18,191,1) 0%, rgba(134,40,206,1) 51%)',
+                backgroundClip: 'border-box',
+              }}
+            />
+          }
+          w={'fit-content'}
+          h={'fit-content'}
+        />
+        <IconButton
+          _hover={{}}
+          _focus={{}}
+          _active={{}}
+          variant={'ghost'}
+          icon={
+            <BsFillTriangleFill
+              size={'4em'}
+              style={{ transform: 'rotate(180deg)' }}
+            />
+          }
+          w={'fit-content'}
+          h={'fit-content'}
+        />
+      </Stack>
     </Stack>
   );
 };
