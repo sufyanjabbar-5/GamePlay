@@ -31,9 +31,8 @@ const GamePage = () => {
   const [number, setnumber] = useState(10);
   const [counter, setCounter] = useState(100);
 
-
   useEffect(() => {
-    if (counter === 0) {
+    if (counter < 0) {
       setCounter(100)
     }
     const timeOut = setInterval(() =>
@@ -42,7 +41,6 @@ const GamePage = () => {
       clearInterval(timeOut)
     }
   }, [counter])
-
 
   useEffect(() => {
     setInterval(() => setnumber(Math.floor(Math.random() * 20 + 1)), 10000);
