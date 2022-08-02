@@ -8,6 +8,7 @@ import {
   Code,
   Grid,
   theme,
+  Stack,
 } from '@chakra-ui/react';
 import GamePage from './components/GamePage'
 import CountdownTimer from './components/counter/CountdownTimer';
