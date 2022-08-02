@@ -1,42 +1,25 @@
-.centered {
-  text-align: center;
-  color: white;
-  position: relative;
-  border-radius: 100%;
-}
-
-.spinner.loading {
-  text-align: center;
-}
-
-.loading-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.spinner.loading:before {
-  content: "";
-  height: 100%;
-  width: 100%;
+.container {
+  height: 30vh;
+  width: 30vw;
+  background-color: transparent;
   position: absolute;
-  /* top: calc(15% - 40px); */
-  right: 0;
-  border-width: 20px;
-  border-style: solid;
-  border-color: #20FC94 transparent #20FC94 transparent;
-  border-radius: 100%;
-  animation: rotation 2s infinite linear;
+  transform: translate(-50%, -50%);
+  top: -50%;
+  left: -50%;
+  display: grid;
+  place-items: center;
 }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.outer-ring {
+  display: grid;
+  place-items: center;
+  width: 20vw;
+  height: 20vh;
+  border-radius: 50%;
+  box-shadow: -5px 14px 44px #000000,
+    5px -16px 50px rgba(255, 255, 255, 0.15);
+    background: red;
 }
+
+
 
