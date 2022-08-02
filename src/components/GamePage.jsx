@@ -23,17 +23,44 @@ function useInterval(callback, delay) {
 
 const GamePage = () => {
   const [counter, setCounter] = useState(100);
+  const [number, setnumber] = useState();
 
-  useInterval(() => {
-    while (counter <= 100) {
-      setCounter(counter - 5);
+  setInterval(
+    function () {
+      let number1 = Math.floor(Math.random() * 21 + 1);
+      setnumber(number1);
     }
-  }, 1000);
+  )
+  useInterval(
+    () => {
+      while (counter <= 100) {
+        setCounter(counter - 5);
+      }
+    }, 1000
+  );
+
 
   return (
     <Stack height={'100vh'} alignItems={'center'} bg={'#161940'} w={'100%'} justify={'center'} spacing={'4'}>
       <Stack>
-
+        <Stack
+          border={'1px solid #FF00FF'}
+          boxShadow="#772138 2px 2px 4px 0px, #772138 1px 2px 21px 8px"
+          borderRadius={'lg'}
+          bgColor="#1A1F26"
+          w={'60%'}
+          px="4"
+          py={'1'}
+          textAlign="center"
+          spacing={'7'}
+          direction='row'
+          alignItems={'end'}
+        >
+          <Text color={'#00F0FF'} fontSize='1.5em'>10</Text>
+          <Text color={'#00F0FF'} fontSize='1.5em'>3</Text>
+          <Text color={'#00F0FF'} fontSize='1.5em'>17</Text>
+          <Text color={'#20FC9D'} fontSize='1.7em' fontWeight={'600'}>9</Text>
+        </Stack>
         <CircularProgress trackColor='inherit' capIsRound thickness={'6px'} className='circlular progress' value={counter} size={'500px'} color={'#20fc94'} alignItems={'center'} justifyContent={'center'} display={'flex'}>
           <CircularProgressLabel className='circlular progress lable' borderRadius={'full'} alignItems={'center'} justifyContent={'center'} display={'flex'}>
             <Stack border={'5px solid #20FC9D'} borderRadius={'full'} h={'385px'} w={'385px'} align={'center'} justify={'center'}>
