@@ -24,9 +24,9 @@ const GamePage = () => {
       <Stack w={{ base: '100%', md: '55%' }} >
         <GameConsole />
       </Stack>
-      {/* <Stack w={'40%'} display={{ base: 'none', sm: 'inherit' }}>
+      <Stack w={'40%'} display={{ base: 'none', sm: 'inherit' }}>
         <LeaderBoard />
-      </Stack> */}
+      </Stack>
     </Stack>
   );
 };

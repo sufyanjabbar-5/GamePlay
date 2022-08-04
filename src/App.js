@@ -7,6 +7,7 @@ import {
 import GamePage from './components/gamePage/GamePage'
 import CountdownTimer from './components/counter/CountdownTimer';
 import Header from './components/header/Header';
+import './App.css'
 function App() {
   return (
     <ChakraProvider theme={theme}>

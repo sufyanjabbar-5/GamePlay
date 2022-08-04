@@ -1,6 +1,8 @@
-import { Heading, Stack, Text, Input } from '@chakra-ui/react';
+import { Heading, Stack, Text, Input, Image } from '@chakra-ui/react';
 import { RiSendPlaneFill } from 'react-icons/ri';
 import { React, useState } from 'react';
+import sendIcon from '../../assets/images/icon-material-send.svg'
+import '../../App.css'
 const LiveChat = () => {
   const [value, setValue] = useState('');
   const handleChange = event => setValue(event.target.value);
@@ -14,6 +16,7 @@ const LiveChat = () => {
       mt={'0 !important'}
       border={'1px solid #FF00FF'}
       boxShadow="#772138 2px 2px 4px 0px, #772138 1px 2px 10px 4px"
+      h={'70vh'}
     >
       <Stack mb={'4 !important'} px={'10'} w={'full'} alignItems="baseline">
         <Heading
@@ -25,9 +28,9 @@ const LiveChat = () => {
           Live Chat
         </Heading>
       </Stack>
-      <Stack spacing={'3'}>
+      <Stack spacing={'3'} overflow={'scroll'} className='chat' overflowX={'hidden'}>
         <Stack p={'4'} mx="3 !important" bgColor={'#1D1D30'}>
-          <Heading fontSize={'md'} color={'#23C232'}>
+          <Heading fontSize={'sm'} color={'#23C232'}>
             Jackpot Classic
           </Heading>
           <Text fontSize={'sm'} color={'#BCBCC2'}>
@@ -37,7 +40,7 @@ const LiveChat = () => {
           </Text>
         </Stack>
         <Stack p={'4'} mx="3 !important" bgColor={'#1D1D30'}>
-          <Heading fontSize={'md'} color={'#20DEFC'}>
+          <Heading fontSize={'sm'} color={'#20DEFC'}>
             Jackpot Classic
           </Heading>
           <Text fontSize={'sm'} color={'#BCBCC2'}>
@@ -53,7 +56,7 @@ const LiveChat = () => {
           mx="3 !important"
           bgColor={'#1D1D30'}
         >
-          <Heading fontSize={'md'} color={'#F59D20'}>
+          <Heading fontSize={'sm'} color={'#F59D20'}>
             Roulette
           </Heading>
           <Text fontSize={'sm'} color={'#BCBCC2'}>
@@ -61,7 +64,7 @@ const LiveChat = () => {
           </Text>
         </Stack>
         <Stack p={'4'} mx="3 !important" bgColor={'#1D1D30'}>
-          <Heading fontSize={'md'} color={'#FC2020'}>
+          <Heading fontSize={'sm'} color={'#FC2020'}>
             Jackpot Classic
           </Heading>
           <Text fontSize={'sm'} color={'#BCBCC2'}>
@@ -84,7 +87,7 @@ const LiveChat = () => {
         w={'100%'}
       >
         <Stack w={'100%'} direction={'row'} alignItems={'center'}>
-          <Heading size={'sm'} color={'#E2A004'}>
+          <Heading fontSize={'sm'} color={'#E2A004'}>
             Me:
           </Heading>
           <Input
@@ -97,8 +100,8 @@ const LiveChat = () => {
             size="sm"
           />
         </Stack>
-        <Stack _hover={{cursor:'pointer'}} bgColor={'yellow'} p='1.5' borderRadius={'md'}>
-          <RiSendPlaneFill fontSize={'1.5rem'} />
+        <Stack _hover={{cursor:'pointer'}}  p='1.5' borderRadius={'md'}>
+          <Image src={sendIcon}/>
         </Stack>
       </Stack>
       </Stack>

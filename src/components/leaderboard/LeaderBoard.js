@@ -30,9 +30,9 @@ const LeaderBoard = () => {
         </Heading>
         <TableContainer mt={'0 !important'}>
           <Table variant="unstyled">
-            <Tbody bgColor={'#071836'}>
+            <Tbody bgColor={'#071836'}  overflow={'scroll'} overflowX={'hidden'}>
               <Tr>
-                <Td color={'#FF0066'}>1</Td>
+                <Td color={'#FF0066'} >1</Td>
                 <Td color={'#25F933'}>Sohaib</Td>
                 <Td isNumeric color={'#FF0066'}>
                   25.4
