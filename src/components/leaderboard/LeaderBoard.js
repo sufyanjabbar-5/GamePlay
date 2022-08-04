@@ -15,11 +15,11 @@ import LiveChat from '../livechat/LiveChat';
 
 const LeaderBoard = () => {
   return (
-    <Stack w={'100%'} py={'2'}>
+    <Stack w={'100%'} h={'100vh'}>
       <Stack direction={'column'} bgColor={'#071836'}>
         <Heading
           border={'1px solid #FF9100'}
-          boxShadow="#82692F 2px 2px 4px 0px, #82692F 1px 2px 9px 5px"
+          boxShadow="0px 0px 8px #FDB620"
           backgroundColor={'#41240F'}
           p={'2'}
           size={'sm'}
@@ -53,7 +53,7 @@ const LeaderBoard = () => {
               </Tr>
               <Tr
                 border={'1px solid #128F8E'}
-                boxShadow="#148288 2px 2px 2px 0px, #148288 1px 2px 6px 3px"
+                boxShadow="0px 0px 6px #07E6FF"
               >
                 <Td color={'#5AFFEE'}>3</Td>
                 <Td color={'#FCA120'}>Asad (m)</Td>
