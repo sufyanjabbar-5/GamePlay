@@ -1,24 +1,20 @@
 import React from 'react';
 import {
   ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
   Stack,
+  theme,
 } from '@chakra-ui/react';
-import GamePage from './components/GamePage'
+import GamePage from './components/gamePage/GamePage'
 import CountdownTimer from './components/counter/CountdownTimer';
+import Header from './components/header/Header';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <CountdownTimer/>
-      <GamePage/>
-      
-
+      <Stack minH={'100vh'} bgColor={'#1D1D30'}> {/*Home Page Container */}
+        <Header />
+        <CountdownTimer />
+        <GamePage />
+      </Stack>
     </ChakraProvider>
   );
 }

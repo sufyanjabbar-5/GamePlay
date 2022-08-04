@@ -15,7 +15,7 @@ const ExpiredNotice = () => {
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
     <div className="show-counter">
-    <Text minW={'fit-content'} paddingBottom={'3'} fontSize='1.2rem' color={'#FCFCFC'} textAlign={'center'}>COMPETITION ENDS IN</Text>
+      <Text minW={'fit-content'} paddingBottom={'2'} color={'#FCFCFC'} fontSize={'sm'} textAlign={'center'}>COMPETITION ENDS IN</Text>
       <Stack
         direction={{ base: 'column', md: 'row' }}
         spacing="8"

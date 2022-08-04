@@ -8,7 +8,6 @@ import {
   Tr,
   Th,
   Td,
-  TableCaption,
   TableContainer,
 } from '@chakra-ui/react';
 
@@ -16,28 +15,21 @@ import LiveChat from '../livechat/LiveChat';
 
 const LeaderBoard = () => {
   return (
-    <Stack w={'30%'} py={'2'}> 
+    <Stack w={'100%'} py={'2'}>
       <Stack direction={'column'} bgColor={'#071836'}>
         <Heading
+          border={'1px solid #FF9100'}
+          boxShadow="#82692F 2px 2px 4px 0px, #82692F 1px 2px 9px 5px"
           backgroundColor={'#41240F'}
           p={'2'}
           size={'sm'}
           textAlign={'center'}
-          border={'2px solid yellow'}
           color={'#EFB94A'}
         >
           LeaderBoard
         </Heading>
-        <TableContainer mt={'0 !important'} >
-          <Table variant="unstyled"  >
-            <Thead>
-              {/* <Tr>
-                <Th>To convert</Th>
-                <Th>into</Th>
-                <Th isNumeric>multiply by</Th>
-                <Th isNumeric>To Convert</Th>
-              </Tr> */}
-            </Thead>
+        <TableContainer mt={'0 !important'}>
+          <Table variant="unstyled">
             <Tbody bgColor={'#071836'}>
               <Tr>
                 <Td color={'#FF0066'}>1</Td>
@@ -59,7 +51,10 @@ const LeaderBoard = () => {
                   25.4
                 </Td>
               </Tr>
-              <Tr border={'2px solid blue'}>
+              <Tr
+                border={'1px solid #128F8E'}
+                boxShadow="#148288 2px 2px 2px 0px, #148288 1px 2px 6px 3px"
+              >
                 <Td color={'#5AFFEE'}>3</Td>
                 <Td color={'#FCA120'}>Asad (m)</Td>
                 <Td isNumeric color={'#5AFFEE'}>
@@ -71,7 +66,7 @@ const LeaderBoard = () => {
               </Tr>
               <Tr>
                 <Td color={'#FFB300'}>4</Td>
-                <Td color={'#641B2C'}>Mustafa</Td>
+                <Td color={'#EB0263'}>Mustafa</Td>
                 <Td isNumeric color={'#DC9D07'}>
                   30.48
                 </Td>
@@ -89,45 +84,6 @@ const LeaderBoard = () => {
                   25.4
                 </Td>
               </Tr>
-
-              {/* <Tr>
-                <Td>6</Td>
-                <Td>Saad</Td>
-                <Td isNumeric>30.48</Td>
-                <Td isNumeric>25.4</Td>
-
-              </Tr>
-              <Tr>
-                <Td>7</Td>
-                <Td>Ali</Td>
-                <Td isNumeric>30.48</Td>
-                <Td isNumeric>25.4</Td>
-
-              </Tr>
-
-              <Tr>
-                <Td>8</Td>
-                <Td>Awab</Td>
-                <Td isNumeric>30.48</Td>
-                <Td isNumeric>25.4</Td>
-
-              </Tr>
-
-              <Tr>
-                <Td>9</Td>
-                <Td>Naveed</Td>
-                <Td isNumeric>30.48</Td>
-                <Td isNumeric>25.4</Td>
-
-              </Tr>
-
-              <Tr>
-                <Td>10</Td>
-                <Td>Awais</Td>
-                <Td isNumeric>30.48</Td>
-                <Td isNumeric>25.4</Td>
-
-              </Tr> */}
             </Tbody>
             <Tfoot></Tfoot>
           </Table>

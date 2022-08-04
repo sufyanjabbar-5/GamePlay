@@ -11,21 +11,23 @@ const CountdownTimer = () => {
   return (
     <>
       {' '}
+      {/* Compitition Timer Wrapper */}
       <Stack
-        spacing={'5'}
+        spacing={'3'}
         w={'100%'}
-        bg="#1D1D30"
-        py={'6'}
+        py={'4'}
         px={{ base: '4', md: '8', lg: '16' }}
+        m={'0 !important'}
       >
+        {/* Timer Wrapper */}
         <Stack
           border={'1px solid #128F8E'}
           boxShadow="#148288 2px 2px 4px 0px, #148288 1px 2px 21px 8px"
           borderRadius={'2xl'}
           bgColor="#1A1F26"
           w={'100%'}
-          px={{base:'4',md:'6',lg:'10'}}
-          py={{ base: '6', lg: '3' }}
+          px={{ base: '4', md: '6', lg: '10' }}
+          py={{ base: '6', lg: '0' }}
         >
           <Stack
             spacing={{ base: '12', lg: 'unset' }}
@@ -34,13 +36,14 @@ const CountdownTimer = () => {
             w={'full'}
             direction={{ base: 'column', lg: 'row' }}
           >
+            {/* Exit Game Button */}
             <Button
               _hover={{}}
               borderColor="#128F8E"
               boxShadow="#148288 0px 2px 4px 0px, #148288 0px 2px 16px 0px"
               variant={'outline'}
               color="white"
-              height={'3.5em'}
+              size={'lg'}
             >
               <HStack>
                 <IoIosExit fontSize={'2rem'} color="aqua" />
@@ -54,7 +57,7 @@ const CountdownTimer = () => {
               boxShadow="#148288 0px 2px 4px 0px, #148288 0px 2px 16px 0px"
               variant={'outline'}
               color="white"
-              height={'3.5em'}
+              size={'lg'}
             >
               <HStack>
                 <AiFillGift fontSize={'2rem'} color="aqua" />
@@ -70,12 +73,12 @@ const CountdownTimer = () => {
           bgColor="#1A1F26"
           w={'100%'}
           px={'3'}
-          py={{ base: '6', lg: '3' }}
+          py={{ base: '6', lg: '1' }}
           textAlign="center"
           spacing={'1'}
         >
-          <Text  color={'#FF9100'}>You are <chakra.span color={'white'} fontWeight='600' fontSize={'lg'}>28th</chakra.span> out of 30,208 players</Text>
-          <Text color={'#FF9100'}>Round <chakra.span color={'white'} fontWeight='600' fontSize={'lg'}>3</chakra.span></Text>
+          <Text color={'#FF9100'} fontSize={'xs'}>You are <chakra.span color={'white'} fontWeight='600' fontSize={'sm'}>28th</chakra.span> out of 30,208 players</Text>
+          <Text color={'#FF9100'} fontSize={'xs'}>Round <chakra.span color={'white'} fontWeight='600' fontSize={'sm'}>3</chakra.span></Text>
         </Stack>
       </Stack>
     </>
