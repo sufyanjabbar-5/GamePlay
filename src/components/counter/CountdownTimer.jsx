@@ -15,14 +15,14 @@ const CountdownTimer = () => {
       <Stack
         spacing={'3'}
         w={'100%'}
-        py={'4'}
+        py={'7'}
         px={{ base: '4', md: '8', lg: '16' }}
         m={'0 !important'}
       >
         {/* Timer Wrapper */}
         <Stack
-          border={'1px solid #128F8E'}
-          boxShadow="#148288 2px 2px 4px 0px, #148288 1px 2px 21px 8px"
+          border={'1px solid #00CBFF'}
+          boxShadow = '0px 0px 30px #0AFFF7'
           borderRadius={'2xl'}
           bgColor="#1A1F26"
           w={'100%'}
@@ -40,7 +40,7 @@ const CountdownTimer = () => {
             <Button
               _hover={{}}
               borderColor="#128F8E"
-              boxShadow="#148288 0px 2px 4px 0px, #148288 0px 2px 16px 0px"
+              boxShadow='0px 0px 11px #009CAEFA'
               variant={'outline'}
               color="white"
               size={'lg'}
@@ -54,7 +54,7 @@ const CountdownTimer = () => {
             <Button
               _hover={{}}
               borderColor="#128F8E"
-              boxShadow="#148288 0px 2px 4px 0px, #148288 0px 2px 16px 0px"
+              boxShadow="0px 0px 11px #009CAEFA"
               variant={'outline'}
               color="white"
               size={'lg'}
@@ -68,7 +68,7 @@ const CountdownTimer = () => {
         </Stack>
         <Stack
           border={'1px solid #FF9100'}
-          boxShadow="#82692F 2px 2px 4px 0px, #82692F 1px 2px 21px 8px"
+          boxShadow="0px 0px 11px #FF9100"
           borderRadius={'2xl'}
           bgColor="#1A1F26"
           w={'100%'}

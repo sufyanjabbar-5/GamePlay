@@ -16,7 +16,7 @@ const LiveChat = () => {
       mt={'0 !important'}
       border={'1px solid #FF00FF'}
       boxShadow="#772138 2px 2px 4px 0px, #772138 1px 2px 10px 4px"
-      h={'70vh'}
+      h={'60vh'}
     >
       <Stack mb={'4 !important'} px={'10'} w={'full'} alignItems="baseline">
         <Heading

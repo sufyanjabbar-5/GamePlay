@@ -22,29 +22,25 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
         className="countdown-link"
       >
         <DateTimeDisplay
-          color={'#FFE9B7'}
-          textShadow={'#FC0 1px 1px 14px'}
+          textShadow={'0px 0px 13px #FFB300'}
           value={days}
           type={'Days'}
           isDanger={days <= 1}
         />
         <DateTimeDisplay
-          color={'#44FD70'}
-          textShadow={'#44FD70 1px 1px 14px'}
+          textShadow={'0px 0px 13px #00FF3C'}
           value={hours}
           type={'Hours'}
           isDanger={false}
         />
         <DateTimeDisplay
-          color={'#FF63DB'}
-          textShadow={'#FF63DB 1px 1px 14px'}
+          textShadow={'0px 0px 13px #FF00C4'}
           value={minutes}
           type={'Mins'}
           isDanger={false}
         />
         <DateTimeDisplay
-          color={'#5FAFFF'}
-          textShadow={'#5FAFFF 1px 1px 14px'}
+          textShadow={'0px 0px 13px #0080FF'}
           value={seconds}
           type={'Secs'}
           isDanger={false}

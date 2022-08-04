@@ -14,17 +14,16 @@ const GamePage = () => {
       w={'100%'}
       justify={'center'}
       spacing={'4'}
-      pl={{ base: '4', md: '8', lg: '16' }}
-      pr='0.5'
+      pl={{ base: '0', md: '8', lg: '16' }}
+      pr={{base:'0',md:"0.5"}}
       pb={'20'}
-      direction={'row'}
+      direction={{base:"column",md:'row'}}
       justifyContent={'space-between'}
-      px={{ base: '4', md: '8', lg: '16' }}
     >
       <Stack w={{ base: '100%', md: '55%' }} >
         <GameConsole />
       </Stack>
-      <Stack w={'40%'} display={{ base: 'none', sm: 'inherit' }}>
+      <Stack w={{base:'100%',md:"40%"}}>
         <LeaderBoard />
       </Stack>
     </Stack>

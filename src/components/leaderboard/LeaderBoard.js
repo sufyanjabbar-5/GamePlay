@@ -12,10 +12,10 @@ import {
 } from '@chakra-ui/react';
 
 import LiveChat from '../livechat/LiveChat';
-
+import '../../App.css'
 const LeaderBoard = () => {
   return (
-    <Stack w={'100%'} h={'100vh'}>
+    <Stack px={{base:'4',md:'0'}} w={'100%'} h={'100vh'}>
       <Stack direction={'column'} bgColor={'#071836'}>
         <Heading
           border={'1px solid #FF9100'}
